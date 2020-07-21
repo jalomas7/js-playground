@@ -1,0 +1,9 @@
+{
+  "name": "js-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
+}
