@@ -14,7 +14,9 @@ const users = [
     'Jacob',
     'Megan',
     'Nick',
-    'Sara'
+    'Lindsey',
+    'Mickey',
+    'Donald'
 ];
 
 /* block comment
