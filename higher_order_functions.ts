@@ -12,3 +12,4 @@ const addFive = addN(5);
 console.log(addTwoSimple(10)) // expect 12
 console.log(addTwo(10)) // expect 12
 console.log(addFive(10)) // expect 15
+console.log(addN(6)(10)) // expect 16
