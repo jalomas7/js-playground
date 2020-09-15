@@ -1,4 +1,10 @@
-import {pickRando, pickSomebody, pickJohnOrJacob} from './team_picker';
+const sortSpy = jest.fn().mockReturnValue(['john', 'jacob', 'jingleheimer', 'smith']);
+
+jest.mock('./sort', () => ({
+    sort: sortSpy
+}));
+
+import {pickRando, pickSomebody, pickJohnOrJacob, sortedTeam} from './team_picker';
 
 describe('team_picker', () => {
     describe('pickSomebody', () => {
@@ -53,5 +59,17 @@ describe('team_picker', () => {
             const expected = pickJohnOrJacob();
             expect(expected).toEqual('john');
         });
+    });
+
+    describe('sortedTeam', () => {
+        // it('should sort the team', () => {
+        //     const expected = sortedTeam();
+        //     expect(expected).toEqual(['john', 'jacob', 'jingleheimer', 'smith'].sort());
+        // });
+
+        it('should call the sort function', () => {
+            const expected = sortedTeam();
+            expect(sortSpy).toBeCalledWith(['john', 'jacob', 'jingleheimer', 'smith']);
+        })
     });
 });

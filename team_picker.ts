@@ -1,3 +1,5 @@
+import {sort} from './sort';
+
 const people = ['john', 'jacob', 'jingleheimer', 'smith'];
 
 export const pickSomebody = n => {
@@ -19,3 +21,7 @@ export const pickJohnOrJacob = () => {
 
     return people[1];
 }
+
+export const sortedTeam = () => {
+    return sort(people);
+};
